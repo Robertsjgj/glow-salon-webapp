@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --primary: 346 77% 49.8%;
+    --primary-foreground: 355.7 100% 97.3%;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+}
+
+.btn-primary {
+  @apply bg-pink-600 text-white hover:bg-pink-700 px-4 py-2 rounded-md transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-pink-100 text-pink-700 hover:bg-pink-200 px-4 py-2 rounded-md transition-colors;
+}
+
+/* Modern Calendar Styles */
+.rdp {
+  --rdp-cell-size: 40px;
+  --rdp-accent-color: #db2777;
+  --rdp-background-color: #fce7f3;
+  margin: 0;
+  width: 100%;
+}
+
+.rdp-months {
+  @apply bg-white justify-center;
+}
+
+.rdp-month {
+  @apply p-4 w-full max-w-sm;
+}
+
+.rdp-caption {
+  @apply mb-4 flex items-center justify-between;
+}
+
+.rdp-caption_label {
+  @apply text-lg font-semibold text-gray-900;
+}
+
+.rdp-nav {
+  @apply flex gap-1;
+}
+
+.rdp-nav_button {
+  @apply flex h-8 w-8 items-center justify-center rounded-full hover:bg-pink-50 transition-colors;
+}
+
+.rdp-nav_button:hover {
+  @apply bg-pink-50;
+}
+
+.rdp-head_cell {
+  @apply font-medium text-gray-500 text-sm;
+}
+
+.rdp-cell {
+  @apply p-0;
+}
+
+.rdp-day {
+  @apply h-10 w-10 text-sm font-normal text-gray-900;
+}
+
+.rdp-day_selected {
+  @apply bg-pink-600 text-white font-semibold hover:bg-pink-700;
+}
+
+.rdp-day_today {
+  @apply bg-pink-50 text-pink-600 font-semibold;
+}
+
+.rdp-day:hover:not([disabled]):not(.rdp-day_selected) {
+  @apply bg-pink-50 text-pink-600;
+}
+
+.rdp-day_disabled {
+  @apply text-gray-300;
+}
+
+.rdp-day_outside {
+  @apply text-gray-300;
+}
+
+.rdp table {
+  @apply w-full;
+}
